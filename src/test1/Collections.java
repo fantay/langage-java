@@ -25,18 +25,23 @@ public class Collections {
         for (int i = 10; i < 100; i = i + 10) {
             listeMulti10.add(i);
         }
+        System.out.println("Liste de multiple de 10 :\n"+listeMulti10);
+        
         //liste multiple de 2
         for (int i = 2; i < 100; i = i + 2) {
             listeMulti2.add(i);
         }
+        System.out.println("Liste de multiple de 2 :\n"+listeMulti2);
+        
         //liste multiple de 3
         for (int i = 3; i < 99; i = i + 3) {
             listeMulti3.add(i);
         }
+        System.out.println("Liste de multiple de 3 :\n"+listeMulti3);
 
         listeMulti2.removeAll(listeMulti10);
         listeMulti2.removeAll(listeMulti3);
         
-        System.out.println(listeMulti2);
+        System.out.println("Liste de multiple de 2 modifier :\n"+listeMulti2);
     }
 }
