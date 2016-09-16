@@ -17,6 +17,12 @@ public class Film {
     private String Synopsis;
     private Integer annee;
 
+    @Override
+    public String toString() {
+        return "Film : "+titre+" année : "+annee+" durée : "+dureeEnMinute+" mintutes.";
+    }
+
+    // Getter et Setter
     public String getTitre() {
         return titre;
     }
