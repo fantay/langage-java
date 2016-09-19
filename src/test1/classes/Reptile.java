@@ -9,16 +9,6 @@ package test1.classes;
  *
  * @author Laurent-LIM
  */
-public class Poisson extends Animal {
-
-    @Override
-    public void manger() {
-        System.out.println("gobe ses proies");
-    }
-
-    @Override
-    public void bouger() {
-        System.out.println("se déplace en nageant");
-    }
-
+public abstract class Reptile extends Animal{
+    
 }

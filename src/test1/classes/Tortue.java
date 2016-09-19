@@ -9,16 +9,16 @@ package test1.classes;
  *
  * @author Laurent-LIM
  */
-public class Poisson extends Animal {
+public class Tortue extends Reptile{
 
     @Override
     public void manger() {
-        System.out.println("gobe ses proies");
+        System.out.println("mache des feuilles de salade");
     }
 
     @Override
     public void bouger() {
-        System.out.println("se déplace en nageant");
+        System.out.println("se déplace lentement");
     }
-
+    
 }
