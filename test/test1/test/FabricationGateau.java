@@ -13,26 +13,31 @@ import test1.classes.Gateau;
  * @author Laurent-LIM
  */
 public class FabricationGateau {
-    
+
     @Test
-    public void gateau(){
-        
+    public void gateau() {
+
         //fabrication de 3 gateaux
         Gateau fab1 = new Gateau();
         Gateau fab2 = new Gateau();
         Gateau fab3 = new Gateau();
-        
+
         //affectation du gout
         fab1.setGout("chocolat");
         fab2.setGout("chocolat");
         fab3.setGout("citron");
-        
-        //affectation de la forme
+
+        //affectation de la couleur
+        fab1.setCouleur("blanc");
+        fab2.setCouleur("noir");
+        fab3.setCouleur("jaune");
+
+        //affectation de la forme, etant static 
+        //elle est commune a tous les gateaux
         Gateau.setForme("ronde");
-        Gateau.setForme("étoile");
-        Gateau.setForme("ronde");
-        
+
         //affichage des gateaux 
-        System.out.println(fab1+"\n"+fab2+"\n"+fab3);
+        System.out.println("" + fab1 + fab2 + fab3 );
+        System.out.println(Gateau.getNbrGateau());
     }
 }

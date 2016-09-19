@@ -10,18 +10,34 @@ package test1.classes;
  * @author Laurent-LIM
  */
 public class Gateau {
-    
+
     //variable de la classe
     static private String forme;
     private String gout;
+    private String couleur;
+    static private int nbrGateau = 0;
+
+
+    //constructeur de la classe gateau
+    //sa definie des valeurs par defauts, qui sont modifiables
+    public Gateau() {
+
+        nbrGateau++;
+        
+    }
 
     //affichage du gateau
     @Override
-    public String toString(){
-        return "Le gateau est au "+gout+" et de forme "+forme;
+    public String toString() {
+        return "Le gateau est au " + gout + ", de forme " + forme + " et de couleur " + couleur + "\n";
+    }
+
+    //getter et setter
+
+    public static Integer getNbrGateau() {
+        return nbrGateau;
     }
     
-    //getter et setter
     public static String getForme() {
         return forme;
     }
@@ -38,10 +54,15 @@ public class Gateau {
         this.gout = gout;
     }
 
-    public void getGout(String chocolat) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
     
     
 }
