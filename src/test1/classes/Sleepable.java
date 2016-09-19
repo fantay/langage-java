@@ -9,13 +9,8 @@ package test1.classes;
  *
  * @author Laurent-LIM
  */
-public abstract class Animal implements Sleepable{
+public interface Sleepable {
     
-    /* variable */
-    private String nom;
+    public void sleep();
     
-    abstract public void manger();
-    abstract public void bouger();
-
- 
 }

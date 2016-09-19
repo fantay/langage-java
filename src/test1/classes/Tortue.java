@@ -20,5 +20,10 @@ public class Tortue extends Reptile{
     public void bouger() {
         System.out.println("se déplace lentement");
     }
+
+    @Override
+    public void sleep() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
