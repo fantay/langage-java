@@ -12,14 +12,14 @@ package test1.classes;
 public class Film {
     
     // variable de la classe film
-    private String titre;
+    static private String titre;
     private Integer dureeEnMinute;
     private String Synopsis;
     private Integer annee;
 
     @Override
     public String toString() {
-        return "Film : "+titre+" année : "+annee+" durée : "+dureeEnMinute+" mintutes.";
+        return "Film : "+titre+" Synopsis : "+Synopsis;
     }
 
     // Getter et Setter
@@ -54,8 +54,5 @@ public class Film {
     public void setAnnee(Integer annee) {
         this.annee = annee;
     }
-    
-
-    
-    
+   
 }

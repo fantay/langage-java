@@ -6,7 +6,7 @@
 package test1.test;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import test1.classes.Film;
 
 /**
  *
@@ -16,6 +16,17 @@ public class FilmTest {
     
     @Test
     public void Test1(){
+        
+        Film f1 = new Film();
+        f1.setTitre("Pulp ficton");
+        f1.setSynopsis("a");
+        
+        Film f2 = new Film();
+        f2.setTitre("Kung fu panda");
+        f2.setSynopsis("ba");
+        
+        System.out.println(f1);
+        System.out.println(f2);
         
     }
 }
