@@ -11,26 +11,44 @@ package test1.classes;
  */
 public class Acteur {
     
-    //variable de la classe acteur
-    
+    //variable de la classe acteur   
     private String nom;
     private String prenom;
+    private static int nbrActeur;
 
+    public Acteur() {
+        nbrActeur++;
+    }
+ 
+    /*constructeur de la classe avec les parametres*/
+    public Acteur(String nom, String prenom) {
+        this();
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+    
+    //getter de la classe 
     public String getNom() {
         return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 
     public String getPrenom() {
         return prenom;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public static int getNbrActeur() {
+        return nbrActeur;
     }
+    
+    /* affichage des donnees de la 
+    classe acteur par le toString */
+
+    @Override
+    public String toString() {
+        return "Nom de l'acteur :"+nom+"\nPrénom de l'acteur :"+prenom+"\n";
+    }
+    
+
     
     
 }

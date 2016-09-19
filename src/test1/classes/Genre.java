@@ -10,19 +10,36 @@ package test1.classes;
  * @author Laurent-LIM
  */
 public class Genre {
-    
+
     //variable de la classe genre
-    
-    private String genre;
+    private String nomGenre;
+    private static int nbrGenre;
 
-    public String getGenre() {
-        return genre;
+    /*constructeur par defaut*/
+    public Genre() {
+        nbrGenre++;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    //constructeur de la classe genre avec attribut
+    public Genre(String nomGenre) {
+        this();
+        this.nomGenre = nomGenre;
+
     }
-    
-    
-    
+
+    //getter de nomGenre
+    public String getNomGenre() {
+        return nomGenre;
+    }
+
+    public static int getNbrGenre() {
+        return nbrGenre;
+    }
+
+    //affichage du genre par le toString
+    @Override
+    public String toString() {
+        return "le genre du film est " + nomGenre + "\n";
+    }
+
 }

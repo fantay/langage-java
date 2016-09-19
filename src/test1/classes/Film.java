@@ -10,49 +10,53 @@ package test1.classes;
  * @author Laurent-LIM
  */
 public class Film {
-    
-    // variable de la classe film
-    static private String titre;
-    private Integer dureeEnMinute;
-    private String Synopsis;
-    private Integer annee;
 
-    @Override
-    public String toString() {
-        return "Film : "+titre+" Synopsis : "+Synopsis;
+    // variable de la classe film
+    private String titre;
+    private Integer dureeEnMinute;
+    private String synopsis;
+    private Integer annee;
+    private static int nbrFilm;
+
+    public Film() {
+        nbrFilm++;
     }
 
-    // Getter et Setter
+    /* contructeur de la classe film avec tous les parametres*/
+    public Film(String titre, Integer dureeEnMinute, String Synopsis, Integer annee) {
+        this();
+        this.titre = titre;
+        this.dureeEnMinute = dureeEnMinute;
+        this.synopsis = Synopsis;
+        this.annee = annee;
+    }
+
+    /* getter de la classe film */
     public String getTitre() {
         return titre;
-    }
-
-    public void setTitre(String titre) {
-        this.titre = titre;
     }
 
     public Integer getDureeEnMinute() {
         return dureeEnMinute;
     }
 
-    public void setDureeEnMinute(Integer dureeEnMinute) {
-        this.dureeEnMinute = dureeEnMinute;
-    }
-
     public String getSynopsis() {
-        return Synopsis;
-    }
-
-    public void setSynopsis(String Synopsis) {
-        this.Synopsis = Synopsis;
+        return synopsis;
     }
 
     public Integer getAnnee() {
         return annee;
     }
 
-    public void setAnnee(Integer annee) {
-        this.annee = annee;
+    public static int getNbrFilm() {
+        return nbrFilm;
     }
-   
+
+    /* affichage des donnees de la 
+    classe acteur par le toString */
+    @Override
+    public String toString() {
+        return "Titre du film :" + titre + "\nAnnée : " + annee + "\nDurée : " + dureeEnMinute + " en minutes\nSynopsis : " + synopsis + "\n";
+    }
+
 }
